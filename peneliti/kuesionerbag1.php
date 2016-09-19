@@ -1,8 +1,3 @@
-<body bgcolor="CDE6F7">
-<head>
-<script type="text/javascript" src="../lib/style.js"></script>
-</head>
-<body onload="kuesioner2_button()">
 <?php
 include "header.php";
 include "menu.php";
