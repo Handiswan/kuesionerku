@@ -1,6 +1,9 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../lib/style.css">
-<link rel="stylesheet" type="text/css" href="../lib/css/bootstrap.css";
+<link rel="stylesheet" type="text/css" href="../lib/css/bootstrap.css">
+<link rel="stylesheet" href="../lib/css/bootstrap-theme.css">
+<script src="../lib/js/jquery-3.1.0.min.js"></script>
+<script src="../lib/js/kuesioner.js"></script>
 <script src="../lib/js/bootstrap.js"></script>
 </head>
 <div class="header">
