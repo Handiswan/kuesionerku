@@ -1,9 +1,5 @@
-<?php
-include "config.php";
-session_start();
-?>
 <!doctype html>
-  <html>
+<html>
     <head>
       <link rel="stylesheet" type="text/css" href="lib/style.css">
       <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css">
