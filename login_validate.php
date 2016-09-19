@@ -6,7 +6,9 @@ $pass =""; // Sender's email ID
 $emailError ="";
 $passError ="";
 $errors = 0;
-$as=$_POST["loginas"];
+if(isset($_POST['login_btn'])) {	
+    $as=$_POST["loginas"];
+}
 if(isset($_POST['login_btn'])) { // Checking null values in message.
 	$email = $_POST["email"]; // Sender Name
 	$pass = $_POST["password"]; // Sender's email ID

@@ -134,6 +134,18 @@ a {
 	border:1px solid #297FB8;
 }
 
+.form-signin input[type=text], .form-signin input[type=password], .form-signin select {
+margin: 10px;
+height: 40px;
+width: 300px;
+}
+
+footer {
+color: gray;
+border-top: solid 2px #ddd;
+padding: 20px;
+}
+
 .tombol {
 	color: #FFFFFF;
 	background-color:#297FB8;
