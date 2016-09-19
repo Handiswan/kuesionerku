@@ -4,7 +4,7 @@ $host = "localhost";
 $user = "root";
 $pass = "";
 $database = "kuesioner";
-$homepage = "http://localhost/coba";
+$homepage = "http://localhost/kuesioner";
 
 // !Pengaturan tampilan error dengan error_reporting
 ini_set('display_errors',0);

@@ -1,5 +1,5 @@
 <?php
-
+include "config.php";
 $name ="";
 $email =""; // Sender Name
 $pass =""; // Sender's email ID
