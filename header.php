@@ -8,7 +8,7 @@
     </head>
     <body>
       <div class="navbar navbar-default navbar-fixed-top"> 
-	<a href="index.php"> <img src="lib/img/logo.PNG" style="padding: 10px; width:250px; margin-left:20px"> </a>
+	<a href="index.php"> <img src="lib/img/logo.png" style="padding: 10px; width:250px; margin-left:20px"> </a>
 	<a href="login.php" class="menu"> <button type="button" class="btn btn-default navbar-btn" style="margin-top:-6px">Login</button></a>
       </div>
       <div class="backheader"></div><!--end class header--> <!--end class header-->

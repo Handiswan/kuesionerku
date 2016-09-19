@@ -4,7 +4,7 @@ include "reg_validate.php";
 ?>
 
 <div>
-<img src="lib/img/halaman.PNG" style="float: left; width:880px;">
+<img src="lib/img/halaman.png" style="float: left; width:880px;">
 </div>
 
 <form action="" method="post" enctype="multipart/form-data">
@@ -39,6 +39,7 @@ include "reg_validate.php";
 		</tr>
 		<tr><td class="m_error"><?php echo $alamatError;?></td></tr>
 		<tr>
+    ?>
 			<td>Kepentingan</td><td>:</td><td> <select class="form" name="kepentingan" value="<?php echo $kepentingan; ?>" placeholder="Maksud keperluan"> <option> </option><option>Organisasi</option> <option>Pribadi</option></select></td>
 		</tr>
 		<tr><td class="m_error"><?php echo $kepentinganError;?></td></tr>
