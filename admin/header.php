@@ -1,7 +1,14 @@
-<body>
-<link rel="stylesheet" type="text/css" href="../lib/style.css">
+<head>
+	<link rel="stylesheet" type="text/css" href="../lib/style.css">
+     <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap-theme.css">
+      <script src="../lib/js/jquery-3.1.0.min.js"></script>
+	  <script src="../lib/js/bootstrap.js"></script>
+</head>
+	  
+	<body>
 <div class="header">
-	<a href="index.php"> <img src="../lib/img/logo.PNG" style="padding: 10px; width:250px; margin-left:20px"> </a>
+	<a href="index.php"> <img src="../lib/img/logo.png" style="padding: 10px; width:250px; margin-left:20px"> </a>
 <?php
 include "../config.php";
 session_start();
@@ -24,13 +31,23 @@ session_start();
 		document.getElementById('menulog').style.display = 'none';
 		}
 </script>
-				
-				
-	<a href="#" class="menu" onclick="haaa()">Administrator</a>
-	<div style="width:200px; position:fixed; right:2px; display:none; " id="menulog">
-<div class="beranda" ><a href="">Profil </a></div>
-<div class="beranda"><a href="../logout.php"> Logout </a></div>
+
+
+<div class="dropdown" style="margin-top:-50px; margin-left:85%">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+    Administrator
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Profil</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="../logout.php">Keluar</a></li>
+  </ul>
 </div>
+
 </div> 
+
+
+
 
 <div class="backheader"></div><!--end class header--><!--end class header-->
