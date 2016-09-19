@@ -1,4 +1,8 @@
+<head>
 <link rel="stylesheet" type="text/css" href="../lib/style.css">
+<link rel="stylesheet" type="text/css" href="../lib/css/bootstrap.css";
+<script src="../lib/js/bootstrap.js"></script>
+</head>
 <div class="header">
 	<a href="index.php"> <img src="../lib/img/logo.png" style="padding: 10px; width:250px; margin-left:20px"> </a>
 <?php
