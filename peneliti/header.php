@@ -31,10 +31,18 @@ session_start();
 </script>
 
 
-	<a href="#" class="menu" onclick="haaa()"> <?php echo $_SESSION['nama_peneliti']; ?></a>
-		<div style="width:200px; position:fixed; right:2px; display:none; " id="menulog">
-		<div class="beranda" ><a href="">Profil </a></div>
-		<div class="beranda"><a href="../logout.php"> Logout </a></div>
+
+
+<div class="dropdown" style="margin-top:-50px; margin-left:85%">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+    <?php echo $_SESSION['nama_peneliti']; ?>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Profil</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="../logout.php">Keluar</a></li>
+  </ul>
 </div>
 
 </div> 
