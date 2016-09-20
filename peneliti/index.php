@@ -1,6 +1,6 @@
 <?php
 include "header.php";
-include "menu.php"
+include "menu.php";
 ?>
 <script type="text/javascript" src="../lib/style.js"></script>
 
