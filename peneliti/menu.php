@@ -1,9 +1,37 @@
-<div class="kotakberanda">
-	<div style="height:80px; background-color: #3598BD"> </div>
-		<a href="index.php" style="text-decoration:none">  <div class="beranda" id="beranda"> <img src="../lib/img/logo_home_b.png" class="logonya"> Beranda</div></a>		
-		<a href="kuesioner.php" style="text-decoration:none"><div class="beranda" id="kuesioner"><img src="../lib/img/logo_kuesioner_b.png" class="logonya">Kuesioner</div></a>
-		<a href="responden.php" style="text-decoration:none"><div class="beranda" id="responden"> <img src="../lib/img/logo_responden_b.png" class="logonya"> Responden</div></a>
-		<a href="laporan.php" style="text-decoration:none"><div class="beranda" id="laporan"><img src="../lib/img/logo_laporan_b.png" class="logonya">Laporan</div></a>
-		<a href="petunjuk.php" style="text-decoration:none"><div class="beranda" id="petunjuk"><img src="../lib/img/logo_petunjuk_b.png" class="logonya">Petunjuk</div></a>
-
+<div class="row">
+  <div class="col-sm-3 col-md-2 sidebar" style="background-color:#f5f5f5; height:100%">
+	<ul class="nav nav-sidebar" style="width:193px">
+		<li class="active">
+			<a href="index.php"> <span class="glyphicon glyphicon-home" aria-hidden="true"> </span> Beranda
+			<span class="sr-only">(current)</span>
+			</a>
+		</li>
+		
+		
+		<li class="active">
+			<a href="kuesioner.php"> <span class="glyphicon glyphicon-list" aria-hidden="true"> </span> Kuesioner
+			<span class="sr-only">(current)</span>
+			</a>
+		</li>
+		
+		<li class="active">
+			<a href="tanggapan.php"> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"> </span> Tanggapan
+			<span class="sr-only">(current)</span>
+			</a>
+		</li>
+		<li class="active">
+			<a href="petunjuk.php"> <span class="glyphicon glyphicon-info-sign" aria-hidden="true"> </span> Petunjuk
+			<span class="sr-only">(current)</span>
+			</a>
+		</li>
+		
+		<li class="active">
+			<a href="tentang.php"> <span class="glyphicon glyphicon-question-sign" aria-hidden="true"> </span> Tentang
+			<span class="sr-only">(current)</span>
+			</a>
+		</li>
+		
+		
+		
+	</ul>
 	</div>

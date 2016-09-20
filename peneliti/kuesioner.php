@@ -3,7 +3,7 @@ include "header.php";
 include "menu.php";
 ?>
 <div class="atasberanda">
-	<img src="../lib/img/logo_kuesioner_a.png" class="logonya" style="width:30px; float:left"> <h2 style="margin:0;padding-left:40px">Kuesioner</h2>
+	 <h4> <span class="glyphicon glyphicon-list" aria-hidden="true"> </span> Kuesioner </h4>
 </div>
 <div class="body2">
   <h2 class="a">DAFTAR KUESIONER</h2>
