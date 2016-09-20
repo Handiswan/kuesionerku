@@ -43,7 +43,7 @@ include "reg_validate.php";
 	        <td>Kepentingan</td><td>:</td><td> <select class="form-control" name="kepentingan" value="<?php echo $kepentingan; ?>" placeholder="Maksud keperluan"><option>Organisasi</option> <option>Pribadi</option></select></td>
 		</tr>
 		<tr><td class="m_error"><?php echo $kepentinganError;?></td></tr>
-		<tr><td><?php if(isset($_GET['success'])){ echo "Data added succesfully"; }?></td></tr>
+		<tr><td colspan="3"><?php if(isset($_GET['success'])){ echo "<p style='padding:10px;color:green;font-weight:bold;border:solid 1px' class='bg-success'>Akun Anda berhasil dibuat!</p>"; }?></td></tr>
 		<tr>
 		<td colspan="3"><center><input type="submit" name="btn_daftar" value="Daftar" class="btn btn-lg btn-primary"> </center></td>
 		</tr>
