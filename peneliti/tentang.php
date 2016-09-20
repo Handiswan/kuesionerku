@@ -6,5 +6,8 @@
 include "header.php";
 include "menu.php";
 ?>
+<div class="atasberanda">
+	 <h4> <span class="glyphicon glyphicon-question-sign" aria-hidden="true"> </span> Tentang </h4>
+</div>
 
 </body>
