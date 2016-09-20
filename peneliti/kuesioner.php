@@ -8,22 +8,25 @@ include "menu.php";
 <div class="body2">
   <h2 class="a">DAFTAR KUESIONER</h2>
   <?php
-  $q_list = $PDO->prepare("SELECT * FROM kuesioner"); 
+  // print_r($_SESSION);
+  $q_list = $PDO->prepare("SELECT * FROM kuesioner WHERE id_peneliti = ?"); 
   if($q_list) {
+      $q_list->bindParam(1, $_SESSION['id_peneliti']);
       $q_list->execute();
       $q_list_count = $q_list->rowCount();
       if($q_list_count == 0) {
 	  echo "<p class='bg-warning' style='padding:10px'>Maaf belum ada data</p>";
       } else {
 	  echo "<table class='table table-striped'>";
-	  echo "<thead style='font-weight:bold'><tr><td>#</td><td>Judul</td><td>Skala</td><td>Link</td><td>Pilihan</td></tr></thead>";
+	  echo "<thead style='font-weight:bold'><tr><td>#</td><td>Judul</td><td>Skala</td><td>Link</td><td>Pilihan</td><td>Dibuat</td></tr></thead>";
 	  $num = 1;
 	  while($f = $q_list->fetch(PDO::FETCH_ASSOC)) {
 	      echo "<tr><td>$num</td>";
 	      echo "<td>" . $f['judul_penelitian'] . "<br><p style='font-size:10px;margin:0' class='text-muted'>" . $f['keterangan'] . "</p></td>";
               echo "<td>" . $f['jenis_skala'] . "</td>";
 	      echo "<td>URL masih kosong</td>";
-	      echo "<td><button class='btn btn-danger'>Hapus</button>";
+	      echo "<td><button class='btn btn-danger' ik='" . $f['id_kuesioner'] . "' id='hapus" . $f['id_kuesioner'] .  "' onclick='kuesioner.hapusData(" . $f['id_kuesioner'] . ")'>Hapus</button>";
+	      echo "<td>" . $f['tanggal'] . "</td>";
 	      echo "</tr>";
 	      $num++;
 	  }
