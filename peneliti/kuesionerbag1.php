@@ -6,7 +6,7 @@ include "menu.php";
 	<img src="../lib/img/logo_kuesioner_a.png" class="logonya" style="width:30px; float:left"> <h2 style="margin:0;padding-left:40px">Kuesioner</h2>
 </div>
 
-<div class="body2">
+<div class="body2" id="body2">
 <?php
 if(isset($_GET['skala'])) {
     echo "kita swicth antar skala";

@@ -16,11 +16,12 @@ include "menu.php";
 	  echo "<p class='bg-warning' style='padding:10px'>Maaf belum ada data</p>";
       } else {
 	  echo "<table class='table table-striped'>";
-	  echo "<thead style='font-weight:bold'><tr><td>#</td><td>Judul</td><td>Link</td><td>Pilihan</td></tr></thead>";
+	  echo "<thead style='font-weight:bold'><tr><td>#</td><td>Judul</td><td>Skala</td><td>Link</td><td>Pilihan</td></tr></thead>";
 	  $num = 1;
 	  while($f = $q_list->fetch(PDO::FETCH_ASSOC)) {
 	      echo "<tr><td>$num</td>";
 	      echo "<td>" . $f['judul_penelitian'] . "<br><p style='font-size:10px;margin:0' class='text-muted'>" . $f['keterangan'] . "</p></td>";
+              echo "<td>" . $f['jenis_skala'] . "</td>";
 	      echo "<td>URL masih kosong</td>";
 	      echo "<td><button class='btn btn-danger'>Hapus</button>";
 	      echo "</tr>";
@@ -35,6 +36,4 @@ include "menu.php";
   </div>
   <a href="kuesionerbag1.php" style="float:right"><div class="btn btn-lg btn-primary">Buat Baru</div></a>
 </div>
-
-
 </body>

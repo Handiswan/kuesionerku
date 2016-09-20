@@ -13,7 +13,7 @@ include "header.php";
 		
 		
 		<li class="active">
-			<a href="#"> <span class="glyphicon glyphicon-search" aria-hidden="true"> </span> Kuesioner
+			<a href="kuesioner.php"> <span class="glyphicon glyphicon-search" aria-hidden="true"> </span> Kuesioner
 			<span class="sr-only">(current)</span>
 			</a>
 		</li>
