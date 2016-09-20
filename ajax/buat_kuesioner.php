@@ -18,10 +18,11 @@ switch($_POST['skala']) {
 			    $li .= "<option value='" . $i . "'>" . $i . "</option>";
 			}
 			$output = <<<"EOT"
-                        <h4>Pilih jumlah jawaban yang diperlukan</h4>
-			<select class='form-control'>
+                        <h4>Pilih jumlah jawaban yang Anda butuhkan</h4>
+			<select style='width:200px' class='form-control'>
 			$li
-			</select>
+			</select><br>
+			<button class='btn btn-lg btn-primary'>Selanjutnya</button>
 EOT;
 			$hasil = json_encode(array(
 			 			'hasil' => 'ok',
