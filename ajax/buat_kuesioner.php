@@ -13,16 +13,15 @@ switch($_POST['skala']) {
 		    case "judul":
 			// yang ditampilkan selanjutnya adalah jumlah jawaban yang harus diberikan.
 			// dibuat dengan javascript!
-			$li = "";
-			for($i = 1; $i < 9; $i++) {
-			    $li .= "<option value='" . $i . "'>" . $i . "</option>";
-			}
 			$output = <<<"EOT"
-                        <h4>Pilih jumlah jawaban yang Anda butuhkan</h4>
-			<select style='width:200px' class='form-control'>
-			$li
-			</select><br>
-			<button class='btn btn-lg btn-primary'>Selanjutnya</button>
+                        <h4>Input pilihan jawaban yang Anda inginkan</h4>
+			<div id='pilihanJawaban'>
+			<input id='n1' class="form-control" style='display:inline;width:100px;' type="number" placeholder="Nilai">
+			<input id='j1' class="form-control" style='display:inline;width:400px;' type="text" placeholder="Keterangan">
+			<button id='s1' style='display:inline' class="btn btn-primary" onclick='kuesioner.likert.simpanPilihan(1)'>Simpan</button><br>
+			</div>
+			<button onclick='kuesioner.likert.tambahPilihan()' class='btn btn-default' style='margin-top:10px'>Tambah Pilihan Jawaban</button><br>
+			<button class='btn btn-lg btn-primary' style='margin-top:10px'>Selanjutnya</button>
 EOT;
 			$hasil = json_encode(array(
 			 			'hasil' => 'ok',
