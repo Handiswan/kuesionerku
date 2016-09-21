@@ -64,7 +64,7 @@ if(isset($_GET['skala'])) {
     }
     echo "Lkert";
 }
-print_r($_GET);
+// print_r($_GET);
 ?>
 
 </div>

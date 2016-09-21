@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="col-sm-3 col-md-2 sidebar" style="background-color:#f5f5f5; height:100%">
+<div class="row" style="margin:0">
+  <div class="col-sm-3 col-md-2 sidebar" style="background-color:#f5f5f5; height:100%;position:fixed">
 	<ul class="nav nav-sidebar" style="width:193px">
 		<li class="active">
 			<a href="index.php"> <span class="glyphicon glyphicon-home" aria-hidden="true"> </span> Beranda

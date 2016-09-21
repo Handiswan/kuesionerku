@@ -1,5 +1,6 @@
 <?php
 include "../config.php";
+header('Content-type: application/json');
 $q = $PDO->prepare("INSERT INTO q_liker_pilihan_f(q_liker_id, nilai, keterangan) VALUES (?, ?, ?)");
 $r = $PDO->prepare("INSERT INTO q_liker_pilihan_uf(q_liker_id, nilai, keterangan) VALUES (?, ?, ?)");
 if($q && $r) {
@@ -12,7 +13,13 @@ if($q && $r) {
     $r->bindParam(3, $_POST['jawaban']);
 
     if($q->execute() && $r->execute()) {
-	echo "ok";
+	$last_id = $PDO->lastInsertId();
+	$r = json_encode(array(
+		'result' => 'ok',
+		'last_id' => $_POST['q_liker_id'],
+		'q_liker_id' => $last_id,
+	));
+	echo $r;
     }
 }
 ?>

@@ -154,6 +154,12 @@ padding: 20px;
 	border:0px;
 	border-radius:2px;
 }
+
+#listJawaban li {
+list-style-type: none;
+margin: 5px;
+}
+
 .logonya {
 	width:20px;
 }

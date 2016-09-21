@@ -32,9 +32,13 @@ switch($_POST['skala']) {
 			$output = <<<"EOT"
                         <h4>Input pilihan jawaban yang Anda inginkan</h4>
 			<div id='pilihanJawaban' status='notAdded' next='2' q_liker_id='$last_id_skala'>
-			<input id='j1' class="form-control" style='display:inline;width:400px;' type="text" placeholder="Jawaban">
-			<input id='n1' class="form-control" style='display:inline;width:100px;' type="number" placeholder="Nilai">
-			<button id='s1' style='display:inline' class="btn btn-primary" onclick='kuesioner.likert.simpanPilihan(1)'>Simpan</button><br>
+			<ul id="listJawaban">
+                          <li id="li_1">
+			    <input id='j1' class="form-control" style='display:inline;width:400px;' type="text" placeholder="Jawaban">
+			    <input id='n1' class="form-control" style='display:inline;width:100px;' type="number" placeholder="Nilai">
+			    <button id='s1' style='display:inline' class="btn btn-primary" onclick='kuesioner.likert.simpanPilihan(1)'>Simpan</button>
+                          </li>
+                        </ul>
 			</div>
 			<button onclick='kuesioner.likert.tambahPilihan()' class='btn btn-default' style='margin-top:10px'>Tambah Pilihan Jawaban</button><br>
 			<button class='btn btn-lg btn-primary' style='margin-top:10px'>Selanjutnya</button>
