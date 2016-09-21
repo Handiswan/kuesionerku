@@ -106,7 +106,6 @@ body{
 
 .body2 {
 	width:78%;
-	height:100%;
 	background-color: #FFFFFF;
 	text-decoration:20px;
 	float:right;
@@ -158,6 +157,21 @@ padding: 20px;
 #listJawaban li {
 list-style-type: none;
 margin: 5px;
+}
+
+#listPertanyaan li {
+list-style-type: none;
+margin: 5px;
+}
+
+#listPertanyaan li input[type=text], .ask {
+padding: 10px;
+border: none;
+outline: none;
+width: 800px;
+margin-top: 50px;
+font-size: 25px;
+padding-left: 0;
 }
 
 .logonya {

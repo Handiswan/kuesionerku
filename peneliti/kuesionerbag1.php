@@ -32,18 +32,17 @@ if(isset($_GET['skala'])) {
 
 <h4>Silahkan lengkapi data berikut </h4>
 <br>
-	<form style="padding: 0 50 0 50">
-	<table border="0px" height="500">
+	<form>
+	<table border="0px">
 		<tr valign="top">
-			<td>Judul</td><td> <textarea required class="form-control" id="judul" name="judul" style=" width:700px; height: 90px"> </textarea> </td>
+			<td> <input required class="ask" style="margin-top:0" id="judul" name="judul" placeholder="Judul .... "></td>
 		</tr>
 		<tr valign="top">
-			<td>Keterangan</td><td> <textarea  required class="form-control" id="keterangan" type="text" name="keterangan" style=" width:700px; height: 150px"> </textarea></td>
+			<td> <textarea  required class="form-control" id="keterangan" type="text" name="keterangan" style=" width:700px; height: 150px">Keterangan diisi disini...</textarea></td>
 		</tr>
 		<tr>
-		  <td>Skala</td>
-		  <td>
-		    <select class="form-control" id="skala" name="skala" >
+		  <td>Skala 
+		    <select style="display:inline;margin-top:10px;width:200px;" class="form-control" id="skala" name="skala" >
 		      <option value="likert">Likert</option>
 		      <option value="guttman">Guttman</option>
 		      <option value="rating">Rating Scale</option>
@@ -55,7 +54,7 @@ if(isset($_GET['skala'])) {
 	</form>
 
 <br>
-<button style="float:right" onclick="kuesioner.likert.simpanJudul()" class="btn btn-lg btn-primary">Selanjutnya</button>
+<button onclick="kuesioner.likert.simpanJudul()" class="btn btn-lg btn-primary">Selanjutnya</button>
 <?php
 }
 if(isset($_GET['skala'])) {

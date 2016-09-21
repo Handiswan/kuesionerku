@@ -41,12 +41,15 @@ switch($_POST['skala']) {
                         </ul>
 			</div>
 			<button onclick='kuesioner.likert.tambahPilihan()' class='btn btn-default' style='margin-top:10px'>Tambah Pilihan Jawaban</button><br>
-			<button class='btn btn-lg btn-primary' style='margin-top:10px'>Selanjutnya</button>
+			<button class='btn btn-lg btn-primary' style='margin-top:10px' onclick='kuesioner.tampilkanFormInputPertanyaan()'>Selanjutnya</button>
 EOT;
 			$hasil = json_encode(array(
 			 			'hasil' => 'ok',
+						'jenis_skala' => $_POST['skala'],
+						'last_id_skala' => $last_id_skala,
+						'id_kuesioner' => $last_id,
 						));
-			echo $output;
+			echo $hasil;
 		        break;
 		}
 	    } else {
