@@ -24,8 +24,12 @@ if($_POST['last_insert_id'] == 0) {
 	$r->bindParam(3, $_POST['last_insert_id']);
 
 	if($r->execute()) {
-	    echo "Di update!";
+	    $r = json_encode(array(
+		    'result' => 'ok',
+		    'terupdate' => 'ok',
+		    'last_insert_id' => $_POST['last_insert_id']
+	    ));
+	    echo $r;
 	}
     }    
-    echo "perbahaui!";
 }
