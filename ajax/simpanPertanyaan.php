@@ -12,6 +12,7 @@ if($_POST['last_insert_id'] == 0) {
 	    $r = json_encode(array(
 		'result' => 'ok',
 		'last_insert_id' => $id_terakhir_ditambahkan,
+		'tersimpan' => 'terbaru_ditambahkan',
   	    ));
 	    echo $r;
         }
