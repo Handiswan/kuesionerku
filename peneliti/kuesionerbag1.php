@@ -35,13 +35,13 @@ if(isset($_GET['skala'])) {
 	<form>
 	<table border="0px">
 		<tr valign="top">
-			<td> <input required class="ask" style="margin-top:0" id="judul" name="judul" placeholder="Judul .... "></td>
+			<td> <input required class="form-control" style="margin-top:0;margin-bottom:10px" id="judul" name="judul" placeholder="Judul .... "></td>
 		</tr>
 		<tr valign="top">
 			<td> <textarea  required class="form-control" id="keterangan" type="text" name="keterangan" style=" width:700px; height: 150px">Keterangan diisi disini...</textarea></td>
 		</tr>
 		<tr>
-		  <td>Skala 
+		  <td>Skala
 		    <select style="display:inline;margin-top:10px;width:200px;" class="form-control" id="skala" name="skala" >
 		      <option value="likert">Likert</option>
 		      <option value="guttman">Guttman</option>

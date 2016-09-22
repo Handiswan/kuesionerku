@@ -161,7 +161,11 @@ footer {
     list-style-type: none;
 }
 
-#listPertanyaan li input[type=text], .ask {
+#listPertanyaan li input[type=text] {
+    width: 800px;
+}
+
+.ask {
     width: 800px;
     margin-top: 50px;
     padding: 10px;
