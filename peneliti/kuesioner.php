@@ -3,19 +3,21 @@ include "header.php";
 include "menu.php";
 ?>
 <div class="atasberanda col-md-10" style="position:fixed">
-	 <h4> <span class="glyphicon glyphicon-list" aria-hidden="true"> </span> Kuesioner </h4>
+	 <h4>
+		 <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Kuesioner
+	 </h4>
 </div>
 <div class="body2">
   <h2 class="a">DAFTAR KUESIONER</h2>
   <?php
   // print_r($_SESSION);
-  $q_list = $PDO->prepare("SELECT * FROM kuesioner WHERE id_peneliti = ?"); 
+  $q_list = $PDO->prepare("SELECT * FROM kuesioner WHERE id_peneliti = ?");
   if($q_list) {
       $q_list->bindParam(1, $_SESSION['id_peneliti']);
       $q_list->execute();
       $q_list_count = $q_list->rowCount();
       if($q_list_count == 0) {
-	  echo "<p class='bg-warning' style='padding:10px'>Maaf belum ada data</p>";
+	      echo "<p class='bg-warning' style='padding:10px'>Maaf belum ada data</p>";
       } else {
 	  echo "<table class='table table-striped'>";
 	  echo "<thead style='font-weight:bold'><tr><td>#</td><td>Judul</td><td>Skala</td><td>Link</td><td>Pilihan</td><td>Dibuat</td></tr></thead>";
