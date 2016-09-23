@@ -35,7 +35,7 @@ if(isset($_GET['skala'])) {
 	<form>
 	<table border="0px">
 		<tr valign="top">
-			<td> <input required class="form-control" style="margin-top:0;margin-bottom:10px" id="judul" name="judul" placeholder="Judul .... "></td>
+			<td> <input required class="form-control" autofocus="autofocus" style="margin-top:0;margin-bottom:10px" id="judul" name="judul" placeholder="Judul .... "></td>
 		</tr>
 		<tr valign="top">
 			<td> <textarea  required class="form-control" id="keterangan" type="text" name="keterangan" style=" width:700px; height: 150px">Keterangan diisi disini...</textarea></td>

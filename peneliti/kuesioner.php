@@ -26,7 +26,7 @@ include "menu.php";
 	      echo "<tr><td>$num</td>";
 	      echo "<td>" . $f['judul_penelitian'] . "<br><p style='font-size:10px;margin:0' class='text-muted'>" . $f['keterangan'] . "</p></td>";
               echo "<td>" . $f['jenis_skala'] . "</td>";
-	      echo "<td>URL masih kosong</td>";
+	      echo "<td><a href='$homepage/kuesioner.php?q=" . $f['url'] . "'>" . $f['url'] . "</a></td>";
 	      echo "<td><button class='btn btn-danger' ik='" . $f['id_kuesioner'] . "' id='hapus" . $f['id_kuesioner'] .  "' onclick='kuesioner.hapusData(" . $f['id_kuesioner'] . ")'>Hapus</button>";
 	      echo "<td>" . $f['tanggal'] . "</td>";
 	      echo "</tr>";
