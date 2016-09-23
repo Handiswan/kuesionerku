@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 23, 2016 at 09:14 
+-- Generation Time: Sep 23, 2016 at 01:23 
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -57,11 +57,31 @@ CREATE TABLE `data` (
 --
 
 CREATE TABLE `form_isian` (
-  `id` int(11) DEFAULT NULL,
+  `id` int(11) NOT NULL,
   `kuesioner_id` int(11) NOT NULL,
   `keterangan` varchar(100) NOT NULL,
   `tipe` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `form_isian`
+--
+
+INSERT INTO `form_isian` (`id`, `kuesioner_id`, `keterangan`, `tipe`) VALUES
+(1, 285, 'Siaa saja', 'angka'),
+(2, 285, 'Siaa saja', 'angka'),
+(3, 285, 'Siaa saja', 'angka'),
+(4, 286, 'dd', 'text'),
+(5, 286, 'dd', 'text'),
+(6, 286, 'ddssssssssss', 'text'),
+(7, 286, 'ddssssssssss', 'text'),
+(8, 286, 'ddssssssssss', 'text'),
+(9, 286, 'ddssssssssss', 'text'),
+(10, 286, 'ddssssssssss', 'text'),
+(11, 287, 'eee', 'text'),
+(12, 287, 'eee', 'text'),
+(13, 287, 'eee', 'text'),
+(14, 287, 'eee', 'text');
 
 -- --------------------------------------------------------
 
@@ -94,7 +114,19 @@ INSERT INTO `kuesioner` (`id_kuesioner`, `jenis_skala`, `id_skala`, `id_peneliti
 (273, 'likert', 201, 9, 'Rasi', 'Keterangan diisi disini...', '2016-09-23', 'WxGLwXFyPn'),
 (274, 'likert', 202, 9, 'jij', 'Keterangan diisi disini...', '2016-09-23', 'XohDpOVNQz'),
 (275, 'likert', 203, 9, 'd', 'Keterangan diisi disini...', '2016-09-23', 'dV7jB9il1B'),
-(276, 'likert', 204, 9, '11', 'Keterangan diisi disini...', '2016-09-23', '8LZHSsqm9M');
+(276, 'likert', 204, 9, '11', 'Keterangan diisi disini...', '2016-09-23', '8LZHSsqm9M'),
+(277, 'likert', 205, 9, 'k', 'Keterangan diisi disini...', '2016-09-23', 'FuE9f4xr9u'),
+(278, 'likert', 206, 9, 'uu', 'Keterangan diisi disini...', '2016-09-23', 'pydj634Wdj'),
+(279, 'likert', 207, 9, 'ii', 'Keterangan diisi disini...', '2016-09-23', '5sgRaQrFRT'),
+(280, 'likert', 208, 9, 'ii', 'iiKeterangan diisi disini...', '2016-09-23', 'zE8t5mHenj'),
+(281, 'likert', 209, 9, 'ii', 'iiKeterangan diisi disini...', '2016-09-23', 'sDj8315He1'),
+(282, 'likert', 210, 9, 'Ka', 'Keterangan diisi disini...', '2016-09-23', 'sg5ulheUEe'),
+(283, 'likert', 211, 9, 'kk', 'kKeterangan diisi disini...', '2016-09-23', 'ampEJ8UJrq'),
+(284, 'likert', 212, 9, 'II', 'Keterangan diisi disini...', '2016-09-23', 'b6VYnvcF7t'),
+(285, 'likert', 213, 9, 'kk', 'Keterangan diisi disini...', '2016-09-23', 'zxR7k1rGvR'),
+(286, 'likert', 214, 9, 'dxd', 'Keterangan diisi disini...', '2016-09-23', 'xOPjWaP1bt'),
+(287, 'likert', 215, 9, 'ii', 'Keterangan diisi disini...', '2016-09-23', 'OUQnPFcXcl'),
+(288, 'likert', 216, 9, 'ii', 'jj', '2016-09-23', 'Wz34sUMhI4');
 
 -- --------------------------------------------------------
 
@@ -186,7 +218,19 @@ INSERT INTO `q_liker` (`id_liker`, `kuesioner_id`) VALUES
 (201, 273),
 (202, 274),
 (203, 275),
-(204, 276);
+(204, 276),
+(205, 277),
+(206, 278),
+(207, 279),
+(208, 280),
+(209, 281),
+(210, 282),
+(211, 283),
+(212, 284),
+(213, 285),
+(214, 286),
+(215, 287),
+(216, 288);
 
 -- --------------------------------------------------------
 
@@ -214,7 +258,20 @@ INSERT INTO `q_liker_pilihan_f` (`id`, `q_liker_id`, `nilai`, `keterangan`) VALU
 (144, 201, 8, 'j'),
 (145, 202, 3, 'ii'),
 (146, 203, 1, 'qq'),
-(147, 204, 1, 'qq');
+(147, 204, 1, 'qq'),
+(148, 205, 8, 'k'),
+(149, 206, 88, 'dsfj'),
+(150, 209, 88, 'jfioej'),
+(151, 210, 3, 'kk'),
+(152, 210, 99, '88'),
+(153, 211, 8, '88'),
+(154, 212, 33, '38'),
+(155, 213, 8, 'k'),
+(156, 214, 88, '88'),
+(157, 215, 8, '88'),
+(158, 216, 3, '8i'),
+(159, 216, 88, '23'),
+(160, 216, 33, '323');
 
 -- --------------------------------------------------------
 
@@ -242,7 +299,20 @@ INSERT INTO `q_liker_pilihan_uf` (`id`, `q_liker_id`, `nilai`, `keterangan`) VAL
 (144, 201, 8, 'j'),
 (145, 202, 3, 'ii'),
 (146, 203, 1, 'qq'),
-(147, 204, 1, 'qq');
+(147, 204, 1, 'qq'),
+(148, 205, 8, 'k'),
+(149, 206, 88, 'dsfj'),
+(150, 209, 88, 'jfioej'),
+(151, 210, 3, 'kk'),
+(152, 210, 99, '88'),
+(153, 211, 8, '88'),
+(154, 212, 33, '38'),
+(155, 213, 8, 'k'),
+(156, 214, 88, '88'),
+(157, 215, 8, '88'),
+(158, 216, 3, '8i'),
+(159, 216, 88, '23'),
+(160, 216, 33, '323');
 
 -- --------------------------------------------------------
 
@@ -347,7 +417,17 @@ INSERT INTO `soal` (`id_soal`, `id_responden`, `id_kuesioner`, `no_soal`, `perta
 (35, 0, 272, 0, 'ddd', 'f'),
 (36, 0, 273, 0, '00', 'f'),
 (37, 0, 275, 0, '11', 'f'),
-(38, 0, 276, 0, '11', 'f');
+(38, 0, 276, 0, '11', 'f'),
+(39, 0, 277, 0, 'kk', 'f'),
+(40, 0, 278, 0, 'iii', 'f'),
+(41, 0, 282, 0, 'd', 'f'),
+(42, 0, 283, 0, '', 'f'),
+(43, 0, 284, 0, 'efe', 'f'),
+(44, 0, 285, 0, 'kkkkkk', 'f'),
+(45, 0, 286, 0, 'q', 'f'),
+(46, 0, 287, 0, 'fe', 'f'),
+(47, 0, 288, 0, 'ijife', 'f'),
+(48, 0, 288, 0, '333', 'f');
 
 --
 -- Indexes for dumped tables
@@ -358,6 +438,12 @@ INSERT INTO `soal` (`id_soal`, `id_responden`, `id_kuesioner`, `no_soal`, `perta
 --
 ALTER TABLE `data`
   ADD PRIMARY KEY (`id_data`);
+
+--
+-- Indexes for table `form_isian`
+--
+ALTER TABLE `form_isian`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `kuesioner`
@@ -447,10 +533,15 @@ ALTER TABLE `soal`
 ALTER TABLE `data`
   MODIFY `id_data` int(10) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `form_isian`
+--
+ALTER TABLE `form_isian`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
 -- AUTO_INCREMENT for table `kuesioner`
 --
 ALTER TABLE `kuesioner`
-  MODIFY `id_kuesioner` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=277;
+  MODIFY `id_kuesioner` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=289;
 --
 -- AUTO_INCREMENT for table `peneliti`
 --
@@ -470,17 +561,17 @@ ALTER TABLE `q_gutman_pilihan_uf`
 -- AUTO_INCREMENT for table `q_liker`
 --
 ALTER TABLE `q_liker`
-  MODIFY `id_liker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
+  MODIFY `id_liker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=217;
 --
 -- AUTO_INCREMENT for table `q_liker_pilihan_f`
 --
 ALTER TABLE `q_liker_pilihan_f`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
 --
 -- AUTO_INCREMENT for table `q_liker_pilihan_uf`
 --
 ALTER TABLE `q_liker_pilihan_uf`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
 --
 -- AUTO_INCREMENT for table `q_rating`
 --
@@ -505,7 +596,7 @@ ALTER TABLE `responden_info`
 -- AUTO_INCREMENT for table `soal`
 --
 ALTER TABLE `soal`
-  MODIFY `id_soal` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id_soal` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
