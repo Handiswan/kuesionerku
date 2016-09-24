@@ -16,7 +16,7 @@ include "login_validate.php";
 	  </tr>
           <tr><td class="text-center text-muted">Login sebagai:</td></tr>
 	  <tr>
-	    <td> <select class="form-control" name="loginas"> <option>Admin</option> <option> Peneliti </option></select></td>
+	    <td> <select class="form-control" name="loginas"> <option>Peneliti</option> <option>Admin</option></select></td>
 	  </tr>
 	  <tr>
 	    <td colspan="3"><center><input type="submit" value="Login" class="btn btn-lg btn-primary" name="login_btn" > </center></td>

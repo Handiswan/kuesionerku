@@ -78,7 +78,7 @@ body {
 }
 
 .atasberanda {
-    z-index: 998;
+    z-index: 1;
     position: fixed;
     width: 100%;
     float: right;

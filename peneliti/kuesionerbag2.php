@@ -9,10 +9,11 @@
 include "header.php";
 include "menu.php";
 ?>
-<div class="atasberanda">
-	<img src="../lib/img/logo_kuesioner_a.PNG" class="logonya" style="width:30px; float:left"> <h2>Kuesioner</h2>
+<div class="atasberanda col-md-10" style="position:fixed">
+	 <h4>
+		 <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Kuesioner
+	 </h4>
 </div>
-<div class="body2">
 
 <h4>Silahkan sesuaikan template skala-nya</h4>
  <a href="kuesionerbag2.php" class="tombol2" style="float:right">Selanjutnya</a> 

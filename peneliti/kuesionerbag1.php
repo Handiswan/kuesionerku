@@ -2,8 +2,10 @@
 include "header.php";
 include "menu.php";
 ?>
-<div class="atasberanda">
-	<img src="../lib/img/logo_kuesioner_a.png" class="logonya" style="width:30px; float:left"> <h2 style="margin:0;padding-left:40px">Kuesioner</h2>
+<div class="atasberanda col-md-10" style="position:fixed">
+	 <h4>
+		 <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Kuesioner
+	 </h4>
 </div>
 
 <div class="body2" id="body2">
@@ -46,7 +48,7 @@ if(isset($_GET['skala'])) {
 		      <option value="likert">Likert</option>
 		      <option value="guttman">Guttman</option>
 		      <option value="rating">Rating Scale</option>
-		      <option value="semantic">Semantic Desferential</option>
+		      <option value="semantic">Semantic Defferensial</option>
 		    </select>
                   </td>
 		</tr>
