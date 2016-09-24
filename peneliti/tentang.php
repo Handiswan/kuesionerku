@@ -10,4 +10,9 @@ include "menu.php";
 	 <h4> <span class="glyphicon glyphicon-question-sign" aria-hidden="true"> </span> Tentang </h4>
 </div>
 
+
+<div class="body2">
+E-Questionaire
+</div>
+
 </body>

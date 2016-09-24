@@ -10,10 +10,10 @@
   <script src="../lib/js/bootstrap.js"></script>
   <script src="../lib/jquery-ui-1.12.1/jquery-ui.js"></script>
 </head>
-<div id="dialogHapus" title="Konfirmasi diperlukan">
+<div id="dialogHapus" title="Konfirmasi diperlukan" style="display:none">
   Anda yakin ingin mengapus data tersebut?
 </div>
-<div id="dialogInfo" title="Info">Harap lengkapi data yang masih kosong</div>
+<div id="dialogInfo" title="Info" style="display:none">Harap lengkapi data yang masih kosong</div>
 <div class="header" style="position:fixed;width:100%;height:100px">
   <a href="index.php"> <img src="../lib/img/logo.png" style="padding: 10px; width:250px; margin-left:20px"> </a>
   <?php
