@@ -2,7 +2,7 @@
 include "header.php";
 include "menu.php";
 ?>
-<div class="atasberanda col-md-10" style="position:fixed">
+<div class="atasberanda col-md-10" style="position:fixed;z-index:9">
 	 <h4>
 		 <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Kuesioner
 	 </h4>
