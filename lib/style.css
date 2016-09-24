@@ -180,6 +180,30 @@ footer {
     margin-bottom: 10px;
 }
 
+.pertanyaan {
+    font-size: 50px;
+    text-align: center;
+}
+
+.jumlah-soal {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #fff;
+  float: right;
+  text-shadow: 0 1px 1px #000;
+}
+.kop-judul {
+    background: #5757b1;
+    height: 100px;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0 1px 1px #000;
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .logonya {
     width: 20px;
 }
