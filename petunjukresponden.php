@@ -27,13 +27,15 @@ echo "Ini adalah halaman kuesioner untuk para responden dengan kode " . $_GET['q
   </div>
 <center>
  <div class="form-signin text-muted" style="margin-top: 70px">
-		<h4> Selamat datang di E-Questionnaire! </h4>
-		Anda akan mengisi kuesioner dari seorang peneliti.
-		<h4> <?php echo $row_get_kuesioner['judul_penelitian']; ?></h4>
-		Apakah anda yakin ingin melanjutkan?
+		<h4>Silahkan baca petunjuk pengisian!</h4>
+		<br>
+		
+		<br>
+		Apakah Anda sudah paham?
+		Klik Lanjutkan untuk menuju tahap berikutnya!
     <br>
-    <a href="petunjukresponden.php"> <button type="button" class="btn btn-primary">Ya</button></a>
-    <button type="button" class="btn btn-primary">Tidak</button>
+    <a href="kuesioner.php"> <button type="button" class="btn btn-primary">Kembali</button></a>
+    <a href="dataresponden.php"> <button type="button" class="btn btn-primary">Lanjutkan</button>
 </div>
 <?php
 ?>

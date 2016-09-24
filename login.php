@@ -24,7 +24,7 @@ include "login_validate.php";
 	</table>
 	</div>
 	<h5>Anda belum punya akun sebagai peneliti?</h5>
-	Silahkan <a href="registrasi.php">daftar</a>
+	Silahkan <a href="registrasi.php" style="text-decoration:none">daftar</a>
 	</form>
 </center>
 </body>

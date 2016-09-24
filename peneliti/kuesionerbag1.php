@@ -18,7 +18,7 @@ if(isset($_GET['skala'])) {
 	    break;
 	case "guttman":
 	    echo "ada guttman";
-	    break;
+	    break; 
 	case "semantic":
 	    echo "ada semantic";
 	    break;

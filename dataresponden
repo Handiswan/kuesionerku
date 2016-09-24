@@ -32,7 +32,7 @@ echo "Ini adalah halaman kuesioner untuk para responden dengan kode " . $_GET['q
 		<h4> <?php echo $row_get_kuesioner['judul_penelitian']; ?></h4>
 		Apakah anda yakin ingin melanjutkan?
     <br>
-    <a href="petunjukresponden.php"> <button type="button" class="btn btn-primary">Ya</button></a>
+    <a href="kuesioner1.php"> <button type="button" class="btn btn-primary">Ya</button></a>
     <button type="button" class="btn btn-primary">Tidak</button>
 </div>
 <?php
