@@ -39,6 +39,6 @@ include "menu.php";
   ?>
   <div class="">
   </div>
-  <a href="kuesionerbag1.php" style="float:right"><button class="btn btn-lg btn-primary" style="margin-bottom:20px">Buat Baru</button></a>
+  <a href="buatkuesioner.php" style="float:right"><button class="btn btn-lg btn-primary" style="margin-bottom:20px">Buat Baru</button></a>
 </div>
 </body>
