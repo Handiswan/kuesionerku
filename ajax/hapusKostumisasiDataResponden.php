@@ -8,6 +8,21 @@ if($q) {
       'hasil' => 'ok',
       'penghapusan_status' => 'berhasil',
     ));
+    echo $h;
+  } else {
+    $h = json_encode(array(
+      'hasil' => 'nok',
+      'penghapusan_status' => 'gagal',
+      'alasan' => 'eksekusi gagal',
+    ));
+    echo $h;
   }
+} else {
+  $h = json_encode(array(
+    'hasil' => 'nok',
+    'penghapusan_status' => 'gagal',
+    'alasan' => 'preapared_statement PDO gagal',
+  ));
+  echo $h;
 }
 ?>
