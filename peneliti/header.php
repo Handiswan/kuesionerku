@@ -3,10 +3,17 @@
   <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap-theme.css">
   <link rel="stylesheet" type="text/css" href="../lib/animate.css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="../lib/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="../lib/jquery-ui-1.12.1/jquery-ui.theme.css">
   <script src="../lib/js/jquery-3.1.0.min.js"></script>
   <script src="../lib/js/kuesioner.js"></script>
   <script src="../lib/js/bootstrap.js"></script>
+  <script src="../lib/jquery-ui-1.12.1/jquery-ui.js"></script>
 </head>
+<div id="dialogHapus" title="Konfirmasi diperlukan">
+  Anda yakin ingin mengapus data tersebut?
+</div>
+<div id="dialogInfo" title="Info">Harap lengkapi data yang masih kosong</div>
 <div class="header" style="position:fixed;width:100%;height:100px">
   <a href="index.php"> <img src="../lib/img/logo.png" style="padding: 10px; width:250px; margin-left:20px"> </a>
   <?php
