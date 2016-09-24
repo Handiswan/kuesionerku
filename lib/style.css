@@ -37,9 +37,7 @@ body {
     background-color: F0F3FC;
 }
 
-*,
-*:after,
-*:before {
+*, *:after, *:before {
     box-sizing: border-box;
     word-wrap: break-word;
 }
@@ -132,9 +130,7 @@ a {
     font-size: 13px;
 }
 
-.form-signin input[type=password],
-.form-signin input[type=text],
-.form-signin select {
+.form-signin input[type=password], .form-signin input[type=text], .form-signin select {
     width: 300px;
     height: 40px;
     margin: 10px;
