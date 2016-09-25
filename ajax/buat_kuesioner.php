@@ -64,7 +64,7 @@ switch($_POST['skala']) {
         );
         // jika persiapan aman ...
         if ($sv) {
-          echo "persiapan eksekusi berhasil";
+          /* echo "persiapan eksekusi berhasil"; */
           // lakukan tambatan data
           $sv->bindParam(1, $_POST['judul']);
           $sv->bindParam(2, $_POST['keterangan']);
@@ -107,7 +107,6 @@ switch($_POST['skala']) {
         } else {
           echo "persiapan eksekusi gagal";
         }
-        echo "Data guttman";
       break;
 
       case "rating":

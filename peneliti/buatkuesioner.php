@@ -18,7 +18,7 @@ if(isset($_GET['skala'])) {
 	    break;
 	case "guttman":
 	    echo "ada guttman";
-	    break; 
+	    break;
 	case "semantic":
 	    echo "ada semantic";
 	    break;
@@ -56,7 +56,7 @@ if(isset($_GET['skala'])) {
 	</form>
 
 <br>
-<button onclick="kuesioner.likert.simpanJudul()" class="btn btn-lg btn-primary">Selanjutnya</button>
+<button onclick="kuesioner.simpanJudul()" class="btn btn-lg btn-primary">Selanjutnya</button>
 <?php
 }
 if(isset($_GET['skala'])) {
