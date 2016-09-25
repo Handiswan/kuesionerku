@@ -1,7 +1,7 @@
 <?php
 include "../config.php";
 echo "<pre>";
-$id = 262;
+$id = $_POST['q_liker_id'];
 
 $q = $PDO->prepare("SELECT * FROM q_liker_pilihan_f WHERE q_liker_id = ?");
 if($q) {
