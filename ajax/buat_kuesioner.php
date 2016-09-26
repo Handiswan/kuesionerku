@@ -91,7 +91,7 @@ switch($_POST['skala']) {
                 // lakukan tambatan data
                 $u->bindParam(1, $_SESSION['id_peneliti']);
                 $u->bindParam(2, $id_skala_terakhir);
-                $u->bindParam(3, $i_terakhir);
+                $u->bindParam(3, $id_terakhir);
                 $u->execute();
               }
             }

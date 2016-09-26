@@ -32,5 +32,5 @@ if($_POST['last_insert_id'] == 0) {
 	    ));
 	    echo $r;
 	}
-    }    
+    }
 }
