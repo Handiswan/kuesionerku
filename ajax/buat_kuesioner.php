@@ -110,9 +110,112 @@ switch($_POST['skala']) {
       break;
 
       case "rating":
+      $sv = $PDO->prepare(
+        "INSERT INTO kuesioner(
+          judul_penelitian,
+          keterangan,
+          jenis_skala, tanggal, url) VALUES (?, ?, ?, NOW(), ?)"
+        );
+        // jika persiapan aman ...
+        if ($sv) {
+          /* echo "persiapan eksekusi berhasil"; */
+          // lakukan tambatan data
+          $sv->bindParam(1, $_POST['judul']);
+          $sv->bindParam(2, $_POST['keterangan']);
+          $sv->bindParam(3, $_POST['skala']);
+          $sv->bindParam(4, generateRandomString());
+          // kemudian lakukan pengujian eksukusi
+          if ($sv->execute()) {
+            // dapatkan id terakhir yang baru saja ditambahkan
+            $id_terakhir = $PDO->lastInsertId(); // untuk digunakan pada q_gutman
+            // tambah data pada tabel q_gutman
+            $q = $PDO->prepare("INSERT INTO q_rating(kuesioner_id) VALUES (?)");
+            if ($q) {
+              $q->bindParam(1, $id_terakhir);
+              $q->execute();
+              $id_skala_terakhir = $PDO->lastInsertId();
+              // berikutnya perbaharui tabel kuesioner
+              $u = $PDO->prepare(
+                "UPDATE kuesioner
+                 SET id_peneliti = ?, id_skala = ? WHERE id_kuesioner = ?
+                 "
+              );
+              // jika persiapan ok ...
+              if ($u) {
+                // lakukan tambatan data
+                $u->bindParam(1, $_SESSION['id_peneliti']);
+                $u->bindParam(2, $id_skala_terakhir);
+                $u->bindParam(3, $id_terakhir);
+                $u->execute();
+              }
+            }
+
+            $hasil = json_encode(array(
+                'hasil' => 'ok',
+                'jenis_skala' => $_POST['skala'],
+                'id_skala_terakhir' => $id_skala_terakhir,
+                'id_kuesioner' => $id_terakhir,
+            ));
+            echo $hasil;
+          }
+        } else {
+          echo "persiapan eksekusi gagal";
+        }
       break;
 
       case "semantic":
+        $sv = $PDO->prepare(
+          "INSERT INTO kuesioner(
+          judul_penelitian,
+          keterangan,
+          jenis_skala, tanggal, url) VALUES (?, ?, ?, NOW(), ?)"
+        );
+        // jika persiapan aman ...
+        if ($sv) {
+          /* echo "persiapan eksekusi berhasil"; */
+          // lakukan tambatan data
+          $sv->bindParam(1, $_POST['judul']);
+          $sv->bindParam(2, $_POST['keterangan']);
+          $sv->bindParam(3, $_POST['skala']);
+          $sv->bindParam(4, generateRandomString());
+          // kemudian lakukan pengujian eksukusi
+          if ($sv->execute()) {
+            // dapatkan id terakhir yang baru saja ditambahkan
+            $id_terakhir = $PDO->lastInsertId(); // untuk digunakan pada q_gutman
+            // tambah data pada tabel q_gutman
+            $q = $PDO->prepare("INSERT INTO q_semantik(kuesioner_id) VALUES (?)");
+            if ($q) {
+              $q->bindParam(1, $id_terakhir);
+              $q->execute();
+              $id_skala_terakhir = $PDO->lastInsertId();
+              // berikutnya perbaharui tabel kuesioner
+              $u = $PDO->prepare(
+                "UPDATE kuesioner
+                 SET id_peneliti = ?, id_skala = ? WHERE id_kuesioner = ?
+                 "
+              );
+              // jika persiapan ok ...
+              if ($u) {
+                // lakukan tambatan data
+                $u->bindParam(1, $_SESSION['id_peneliti']);
+                $u->bindParam(2, $id_skala_terakhir);
+                $u->bindParam(3, $id_terakhir);
+                $u->execute();
+              }
+            }
+
+            $hasil = json_encode(array(
+                'hasil' => 'ok',
+                'jenis_skala' => $_POST['skala'],
+                'id_skala_terakhir' => $id_skala_terakhir,
+                'id_kuesioner' => $id_terakhir,
+            ));
+            echo $hasil;
+          }
+        } else {
+          echo "persiapan eksekusi gagal";
+        }
+
       break;
     }
 ?>
