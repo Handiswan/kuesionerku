@@ -44,6 +44,7 @@ if ($s) {
   <script src="../lib/js/bootstrap.js"></script>
   <script src="../lib/jquery-ui-1.12.1/jquery-ui.js"></script>
   <script type="text/javascript" language="javascript">
+    var jenis_skala = '<?php echo $r['jenis_skala']; ?>';
     var pertanyaan = new Array();
     <?php
     foreach($d_pernyataan as $key => $value) {
@@ -69,39 +70,72 @@ if ($s) {
   <div class="row" style="margin:0">
     <div id="pertanyaan" class="col-md-12 pertanyaan"></div>
   </div>
-  <div class="row" style="margin:0">
+  <div class="row" style="margin:0" id='boxJawaban'>
     <?php
-    // Ambil data dari tabel q_liker terlebih dahulu
-    $q_liker = $PDO->prepare("SELECT * FROM q_liker WHERE kuesioner_id = ?");
-    if($q_liker) {
-      $q_liker->bindParam(1, $r['id_kuesioner']);
-      if($q_liker->execute()) {
-        $hasil_q_liker = $q_liker->fetch(PDO::FETCH_ASSOC);
-        // kita sudah dapat nilai dari q_liker_id
-        // print_r($hasil_q_liker);
-      }
-    }
-
-    // echo $pernyataan['f_or_uf'];
-    if ($pernyataan['f_or_uf'] == 'f') {
-      $m = $PDO->prepare("SELECT * FROM q_liker_pilihan_f WHERE q_liker_id = ?");
-    } else {
-      $m = $PDO->prepare("SELECT * FROM q_liker_pilihan_uf WHERE q_liker_id = ?");
-    }
-
-    if($m) {
-      // echo "persiapan berhasil";
-      $m->bindParam(1, $hasil_q_liker['id_liker']);
-      if($m->execute()) {
-        echo "<ul class='daftar-jawaban'>";
-        while($row = $m->fetch(PDO::FETCH_ASSOC)) {
-          echo "<li>" . $row['keterangan'] . "</li>";
-          // echo "hool";
+    // pengulangan jawaban untuk likert
+    if ($r['jenis_skala'] == 'likert') {
+      // Ambil data dari tabel q_liker terlebih dahulu
+      $q_liker = $PDO->prepare("SELECT * FROM q_liker WHERE kuesioner_id = ?");
+      if($q_liker) {
+        $q_liker->bindParam(1, $r['id_kuesioner']);
+        if($q_liker->execute()) {
+          $hasil_q_liker = $q_liker->fetch(PDO::FETCH_ASSOC);
+          // kita sudah dapat nilai dari q_liker_id
+          // print_r($hasil_q_liker);
         }
+      }
+
+      // echo $pernyataan['f_or_uf'];
+      if ($pernyataan['f_or_uf'] == 'f') {
+        $m = $PDO->prepare("SELECT * FROM q_liker_pilihan_f WHERE q_liker_id = ?");
+      } else {
+        $m = $PDO->prepare("SELECT * FROM q_liker_pilihan_uf WHERE q_liker_id = ?");
+      }
+
+      if($m) {
+        // echo "persiapan berhasil";
+        $m->bindParam(1, $hasil_q_liker['id_liker']);
+        if($m->execute()) {
+          echo "<ul id='daftarJawaban' class='daftar-jawaban'>";
+          while($row = $m->fetch(PDO::FETCH_ASSOC)) {
+            echo "<li>" . $row['keterangan'] . "</li>";
+            // echo "hool";
+          }
+          echo "</ul>";
+        }
+      } else {
+        // echo "persiapan gagal";
+      }
+    } else if ($r['jenis_skala'] == 'guttman') {
+      $s = $PDO->prepare("SELECT * FROM q_gutman_pilihan WHERE kuesioner_id = ?");
+      if ($s) {
+        $s->bindParam(1, $r['id_kuesioner']);
+        if ($s->execute()) {
+          $d_jawaban_a = [];
+          $d_jawaban_b = [];
+          while($daftar = $s->fetch(PDO::FETCH_ASSOC)) {
+            $d_jawaban_a[] = $daftar['keterangan_a'];
+            $d_jawaban_b[] = $daftar['keterangan_b'];
+          }
+          // print_r($d_jawaban_a);
+          // print_r($d_jawaban_b);
+          echo "<script type='text/javascript' language='javascript'>";
+          echo "var jawaban_a = new Array();";
+          echo "var jawaban_b = new Array();";
+          foreach($d_jawaban_a as $key => $value) {
+            echo "jawaban_a.push('$value');";
+          }
+          foreach($d_jawaban_b as $key => $value) {
+            echo "jawaban_b.push('$value');";
+          }
+          echo "</script>";
+        }
+        // tampilkan html
+        echo "<ul id='daftarJawaban' class='daftar-jawaban'>";
+        echo "<li>$d_jawaban_a[0]</li>";
+        echo "<li>$d_jawaban_b[0]</li>";
         echo "</ul>";
       }
-    } else {
-      // echo "persiapan gagal";
     }
     ?>
     <div onclick="pratinjau.berikutnya()" id="berikutnya" class="pratinjau-lainnya">Berikutnya</div>
