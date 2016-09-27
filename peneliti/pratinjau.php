@@ -155,6 +155,53 @@ if ($s) {
           echo "</ul>";
         }
       }
+    } else if ($r['jenis_skala'] == 'semantic') {
+      $q = $PDO->prepare("SELECT * FROM q_semantik_pilihan WHERE kuesioner_id = ?");
+      if ($q) {
+        $q->bindParam(1, $r['id_kuesioner']);
+        if ($q->execute()) {
+          $d_jawaban_a = [];
+          $d_jawaban_b = [];
+          $d_nilai_a = [];
+          $d_nilai_b = [];
+          while($daftar = $q->fetch(PDO::FETCH_ASSOC)) {
+            $d_jawaban_a[] = $daftar['label_min'];
+            $d_jawaban_b[] = $daftar['label_max'];
+            $d_nilai_a[] = $daftar['nilai_min'];
+            $d_nilai_b[] = $daftar['nilai_max'];
+          }
+          //print_r($d_jawaban_a);
+          //print_r($d_jawaban_b);
+          //print_r($d_nilai_a);
+          //print_r($d_nilai_b);
+          echo "<script type='text/javascript' language='javascript'>";
+          echo "var jawaban_a = new Array();";
+          echo "var jawaban_b = new Array();";
+          echo "var nilai_a = new Array();";
+          echo "var nilai_b = new Array();";
+          foreach($d_jawaban_a as $key => $value) {
+            echo "jawaban_a.push('$value');";
+          }
+          foreach($d_jawaban_b as $key => $value) {
+            echo "jawaban_b.push('$value');";
+          }
+          foreach($d_nilai_a as $key => $value) {
+            echo "nilai_a.push('$value');";
+          }
+          foreach($d_nilai_b as $key => $value) {
+            echo "nilai_b.push('$value');";
+          }
+          echo "</script>";
+          // tampilkan html nya
+          echo "<ul id='daftarJawaban' class='daftar-jawaban'>";
+          echo "<li style='overflow:auto'>";
+          echo "<span style='float:left'>" . $d_jawaban_a[0] . " (" . $d_nilai_a[0] . ")</span>";
+          echo "<input type='range' id='batasan' min='" . $d_nilai_a[0] . "' max='" . $d_nilai_b[0] . "'>";
+          echo "<span style='float:right'>" . $d_jawaban_b[0] . " (" . $d_nilai_b[0] . ")</span>";
+          echo "</li>";
+          echo "</ul>";
+        }
+      }
     }
     ?>
     <div onclick="pratinjau.berikutnya()" id="berikutnya" class="pratinjau-lainnya">Berikutnya</div>
