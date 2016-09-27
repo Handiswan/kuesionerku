@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 26, 2016 at 12:03 
+-- Generation Time: Sep 27, 2016 at 04:11 
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -96,7 +96,20 @@ INSERT INTO `form_isian` (`id`, `kuesioner_id`, `keterangan`, `tipe`) VALUES
 (89, 413, 'Nama Ibu', 'text'),
 (90, 416, 'Nama', 'text'),
 (91, 416, 'Usia', 'angka'),
-(92, 416, 'Jenis Kelamin', 'gender');
+(92, 416, 'Jenis Kelamin', 'gender'),
+(93, 450, 'Nama', 'text'),
+(94, 450, 'Usia', 'tanggal'),
+(95, 451, 'Nama', 'text'),
+(96, 451, 'Usia', 'angka'),
+(97, 462, 'Usia', 'text'),
+(98, 462, 'Nama', 'text'),
+(100, 493, 'Kere', 'text'),
+(101, 493, 'Usia', 'angka'),
+(102, 494, 'Nama', 'text'),
+(103, 494, 'Usia', 'angka'),
+(104, 494, 'Nama Panggilan', 'text'),
+(105, 496, 'Usia', 'text'),
+(106, 496, 'Usinaal', 'text');
 
 -- --------------------------------------------------------
 
@@ -121,7 +134,38 @@ CREATE TABLE `kuesioner` (
 
 INSERT INTO `kuesioner` (`id_kuesioner`, `jenis_skala`, `id_skala`, `id_peneliti`, `judul_penelitian`, `keterangan`, `tanggal`, `url`) VALUES
 (334, 'likert', 262, 9, 'Pengaruh cinta dan kasih sayang terhadap perilaku berprestasi anak muda kota Makassar', 'Penelitian ini menggunakan pendekatan kasih dan sayang kepada 500 pemuda kota Makassar yang terserang virus cinta.', '2016-09-24', 'L5QYhxYktG'),
-(416, 'guttman', 63, 9, 'Linux vs Anggur', 'Keterangan diisi disini...', '2016-09-26', 'pNyA6AwZDz');
+(456, 'semantic', 2, 9, 'Semantic', 'Ini adalah rating dengan tipe semantic', '2016-09-27', 'qOsz4DTUIo'),
+(463, 'semantic', 8, 9, 'Keren', 'Keterangan diisi disini...', '2016-09-27', 'UvNEyNayCv'),
+(464, 'semantic', 9, 9, 'Keren', 'Keterangan diisi disini...', '2016-09-27', 'Xf3Jmp8Zik'),
+(465, 'semantic', 10, 9, 'Helo', 'Keterangan diisi disini...', '2016-09-27', '6PJ4pvLkVl'),
+(466, 'semantic', 11, 9, 'Hello', 'Keterangan diisi disini...', '2016-09-27', 'jmjZYmBjQf'),
+(467, 'semantic', 12, 9, 'joi', 'Keterangan diisi disini...', '2016-09-27', 'ityW1H4lx6'),
+(468, 'semantic', 13, 9, 'Hayo', 'Keterangan diisi disini...', '2016-09-27', 'cvrn3oa8dO'),
+(469, 'semantic', 14, 9, 'Hello', 'Keterangan diisi disini...', '2016-09-27', '85UofFkj4z'),
+(470, 'semantic', 15, 9, 'jiuoj', 'Keterangan diisi disini...', '2016-09-27', 'P5CPXPr9Bt'),
+(471, 'semantic', 16, 9, 'joi', 'Keterangan diisi disini...', '2016-09-27', 'mHbOKKy9QF'),
+(472, 'semantic', 17, 9, 'jjoi', 'Keterangan diisi disini...', '2016-09-27', 'Ke4SZK79YG'),
+(473, 'semantic', 18, 9, 'Belajar Markdown', 'Keterangan diisi disini...', '2016-09-27', 'lrOKsElRAz'),
+(474, 'semantic', 19, 9, 'Aku disini ', 'Keterangan diisi disini...', '2016-09-27', 'NiAadAlwRG'),
+(475, 'semantic', 20, 9, 'Semantic', 'Keterangan diisi disini...', '2016-09-27', 'NswZgvejT0'),
+(476, 'semantic', 21, 9, 'joiji', 'Keterangan diisi disini...', '2016-09-27', 'rPODTqbI9U'),
+(477, 'semantic', 22, 9, 'Keren...', 'Keterangan diisi disini...', '2016-09-27', 'afQc5qsbA2'),
+(478, 'semantic', 23, 9, 'You', 'Keterangan diisi disini...', '2016-09-27', 'EXpeNSp3Dv'),
+(479, 'semantic', 24, 9, 'Lalu apa?', 'Keterangan diisi disini...', '2016-09-27', 'OXS7XQuzal'),
+(480, 'semantic', 25, 9, 'Keren', 'Keterangan diisi disini...', '2016-09-27', 'ZUBinp2Fsf'),
+(481, 'semantic', 26, 9, 'Testing Database ... ', 'Keterangan diisi disini...', '2016-09-27', 'MBoh6VABa0'),
+(482, 'semantic', 27, 9, 'KIII', 'Keterangan diisi disini...', '2016-09-27', 'VxUgjHbpUf'),
+(483, 'semantic', 28, 9, 'Testing lagi...', 'Keterangan diisi disini...', '2016-09-27', 'l8sSi5ITuX'),
+(484, 'semantic', 29, 9, 'Mari sauya coba', 'Keterangan diisi disini...', '2016-09-27', 'Wx6ZUjFejV'),
+(485, 'semantic', 30, 9, 'nioj', 'Keterangan diisi disini...', '2016-09-27', 'n0RdeIjmrx'),
+(489, 'semantic', 34, 9, 'Hello', 'Keterangan diisi disini...', '2016-09-27', 'm41T7S5w5G'),
+(491, 'semantic', 36, 9, 'Keren', 'Keterangan diisi disini...', '2016-09-27', 'TjrmRSBT2J'),
+(492, 'semantic', 37, 9, 'Lalu', 'Keterangan diisi disini...', '2016-09-27', 'lL4JQY5KNM'),
+(493, 'semantic', 38, 9, 'Nilai', 'Keterangan diisi disini...', '2016-09-27', 'fO76nEc6Vu'),
+(494, 'semantic', 39, 9, 'Pengaruh kebaikan hati seseorang yang berkembang biak membaik seperti buah sejati yang tak bisa mati', 'Keterangan diisi disini...', '2016-09-27', 'aKGXD61hBP'),
+(495, 'semantic', 40, 9, 'Coba', 'Keterangan diisi disini...', '2016-09-27', 'AApA9b68V4'),
+(496, 'semantic', 41, 9, 'Testing...', 'Keterangan diisi disini...', '2016-09-27', 'gQCb261ZaS'),
+(497, 'likert', 282, 9, 'iu', 'Keterangan diisi disini...', '2016-09-27', 'Yq65MBzqij');
 
 -- --------------------------------------------------------
 
@@ -382,7 +426,8 @@ INSERT INTO `q_liker` (`id_liker`, `kuesioner_id`) VALUES
 (278, 409),
 (279, 410),
 (280, 411),
-(281, 412);
+(281, 412),
+(282, 497);
 
 -- --------------------------------------------------------
 
@@ -422,7 +467,9 @@ INSERT INTO `q_liker_pilihan_f` (`id`, `q_liker_id`, `nilai`, `keterangan`) VALU
 (220, 278, 88, 'joij'),
 (221, 279, 88, 'jio'),
 (222, 280, 88, 'jij'),
-(223, 281, 88, 'jioj');
+(223, 281, 88, 'jioj'),
+(224, 282, 8, 'Nilai'),
+(225, 282, 6, 'iuh');
 
 -- --------------------------------------------------------
 
@@ -462,7 +509,9 @@ INSERT INTO `q_liker_pilihan_uf` (`id`, `q_liker_id`, `nilai`, `keterangan`) VAL
 (220, 278, 88, 'joij'),
 (221, 279, 88, 'jio'),
 (222, 280, 88, 'jij'),
-(223, 281, 88, 'jioj');
+(223, 281, 88, 'jioj'),
+(224, 282, 8, 'Nilai'),
+(225, 282, 6, 'iuh');
 
 -- --------------------------------------------------------
 
@@ -476,6 +525,86 @@ CREATE TABLE `q_rating` (
   `nilai_max` int(11) NOT NULL,
   `kuesioner_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `q_rating`
+--
+
+INSERT INTO `q_rating` (`id`, `nilai_min`, `nilai_max`, `kuesioner_id`) VALUES
+(1, 0, 0, 417),
+(2, 0, 0, 419),
+(3, 0, 0, 420),
+(4, 0, 0, 421),
+(5, 0, 0, 422),
+(6, 0, 0, 423),
+(7, 0, 0, 424),
+(8, 0, 0, 425),
+(9, 0, 0, 426),
+(10, 0, 0, 427),
+(11, 0, 0, 428),
+(12, 0, 0, 429),
+(13, 0, 0, 430),
+(14, 0, 0, 431),
+(15, 0, 0, 432),
+(16, 0, 0, 433),
+(17, 0, 0, 434),
+(18, 0, 0, 435),
+(19, 0, 0, 436),
+(20, 0, 0, 437),
+(21, 0, 0, 438),
+(22, 0, 0, 439),
+(23, 0, 0, 440),
+(24, 0, 0, 441),
+(25, 0, 0, 442),
+(26, 0, 0, 443),
+(27, 0, 0, 444),
+(28, 0, 0, 445),
+(29, 0, 0, 446),
+(30, 0, 0, 447),
+(31, 0, 0, 448),
+(32, 0, 0, 449),
+(33, 0, 0, 450),
+(34, 0, 0, 451),
+(35, 0, 0, 452),
+(36, 0, 0, 453),
+(37, 0, 0, 454),
+(38, 0, 0, 455),
+(39, 0, 0, 462);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `q_rating_pilihan`
+--
+
+CREATE TABLE `q_rating_pilihan` (
+  `id` int(11) NOT NULL,
+  `kuesioner_id` int(11) NOT NULL,
+  `q_rating_id` int(11) NOT NULL,
+  `nilai_min` int(11) NOT NULL,
+  `nilai_max` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `q_rating_pilihan`
+--
+
+INSERT INTO `q_rating_pilihan` (`id`, `kuesioner_id`, `q_rating_id`, `nilai_min`, `nilai_max`) VALUES
+(1, 425, 214, 0, 0),
+(2, 425, 215, 0, 0),
+(3, 425, 216, 0, 0),
+(4, 425, 217, 0, 0),
+(5, 0, 0, 10, 20),
+(6, 0, 0, 10, 20),
+(7, 0, 0, 5, 40),
+(8, 449, 0, 10, 50),
+(9, 450, 0, 8, 20),
+(10, 451, 0, 1, 10),
+(11, 452, 0, 10, 100),
+(12, 453, 0, 10, 300),
+(13, 454, 0, 10, 100),
+(14, 455, 0, 20, 40),
+(15, 462, 0, 10, 100);
 
 -- --------------------------------------------------------
 
@@ -492,6 +621,100 @@ CREATE TABLE `q_semantik` (
   `kuesioner_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `q_semantik`
+--
+
+INSERT INTO `q_semantik` (`id`, `nilai_min`, `nilai_max`, `label_min`, `label_max`, `kuesioner_id`) VALUES
+(1, 0, 0, '', 0, 418),
+(2, 0, 0, '', 0, 456),
+(3, 0, 0, '', 0, 457),
+(4, 0, 0, '', 0, 458),
+(5, 0, 0, '', 0, 459),
+(6, 0, 0, '', 0, 460),
+(7, 0, 0, '', 0, 461),
+(8, 0, 0, '', 0, 463),
+(9, 0, 0, '', 0, 464),
+(10, 0, 0, '', 0, 465),
+(11, 0, 0, '', 0, 466),
+(12, 0, 0, '', 0, 467),
+(13, 0, 0, '', 0, 468),
+(14, 0, 0, '', 0, 469),
+(15, 0, 0, '', 0, 470),
+(16, 0, 0, '', 0, 471),
+(17, 0, 0, '', 0, 472),
+(18, 0, 0, '', 0, 473),
+(19, 0, 0, '', 0, 474),
+(20, 0, 0, '', 0, 475),
+(21, 0, 0, '', 0, 476),
+(22, 0, 0, '', 0, 477),
+(23, 0, 0, '', 0, 478),
+(24, 0, 0, '', 0, 479),
+(25, 0, 0, '', 0, 480),
+(26, 0, 0, '', 0, 481),
+(27, 0, 0, '', 0, 482),
+(28, 0, 0, '', 0, 483),
+(29, 0, 0, '', 0, 484),
+(30, 0, 0, '', 0, 485),
+(31, 0, 0, '', 0, 486),
+(32, 0, 0, '', 0, 487),
+(33, 0, 0, '', 0, 488),
+(34, 0, 0, '', 0, 489),
+(35, 0, 0, '', 0, 490),
+(36, 0, 0, '', 0, 491),
+(37, 0, 0, '', 0, 492),
+(38, 0, 0, '', 0, 493),
+(39, 0, 0, '', 0, 494),
+(40, 0, 0, '', 0, 495),
+(41, 0, 0, '', 0, 496);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `q_semantik_pilihan`
+--
+
+CREATE TABLE `q_semantik_pilihan` (
+  `id` int(11) NOT NULL,
+  `q_semantik_id` int(11) NOT NULL,
+  `kuesioner_id` int(11) NOT NULL,
+  `nilai_min` int(11) NOT NULL,
+  `nilai_max` int(11) NOT NULL,
+  `label_min` varchar(100) NOT NULL,
+  `label_max` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `q_semantik_pilihan`
+--
+
+INSERT INTO `q_semantik_pilihan` (`id`, `q_semantik_id`, `kuesioner_id`, `nilai_min`, `nilai_max`, `label_min`, `label_max`) VALUES
+(1, 22, 477, 8, 12, 'ljioj', 'jijioji'),
+(2, 22, 477, 8, 12, 'ljioj', 'jijioji'),
+(3, 22, 477, 8, 12, 'ljioj', 'jijioji'),
+(4, 22, 477, 8, 12, 'ljioj', 'jijioji'),
+(5, 22, 477, 8, 12, 'ljioj', 'jijioji'),
+(6, 22, 477, 8, 12, 'ljioj', 'jijioji'),
+(7, 22, 477, 8, 12, 'ljioj', 'jijioji'),
+(8, 22, 477, 8, 12, 'ljioj', 'jijioji'),
+(9, 23, 478, 10, 100, 'Keren', 'Boleh'),
+(10, 23, 478, 10, 100, 'Keren', 'Boleh'),
+(11, 24, 479, 10, 30, 'Keren', 'Lumayan'),
+(12, 24, 479, 10, 30, 'Keren', 'Lumayan'),
+(13, 25, 480, 10, 30, 'Nilai', 'Keren'),
+(14, 26, 481, 89, 9898, 'nI', 'noon'),
+(15, 27, 482, 1, 10, 'kecil', 'besar'),
+(16, 29, 484, 10, 90, 'Teting', 'nni'),
+(17, 30, 485, 888, 88888, 'ban serep', 'mobil serep'),
+(18, 32, 487, 10, 30, 'Nilai', 'Kapan'),
+(19, 36, 491, 10, 7, 'Bagus', 'Keren'),
+(20, 37, 492, 3, 5, 'Yuhu', 'Hahah'),
+(21, 38, 493, 8, 60, 'Nilai', 'nini'),
+(22, 39, 494, 10, 100, 'Bagus', 'Hebat'),
+(23, 40, 495, 10, 100, 'Kurang', 'Hebat'),
+(24, 41, 496, 10, 100, 'bagus', 'keren'),
+(25, 41, 496, 10, 100, 'sumpah', 'superb');
+
 -- --------------------------------------------------------
 
 --
@@ -499,7 +722,8 @@ CREATE TABLE `q_semantik` (
 --
 
 CREATE TABLE `responden` (
-  `id_responden` int(10) NOT NULL
+  `id_responden` int(10) NOT NULL,
+  `kuesioner_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -651,7 +875,57 @@ INSERT INTO `soal` (`id_soal`, `id_responden`, `id_kuesioner`, `no_soal`, `perta
 (205, 0, 416, 0, 'Kapan terakhir kali Anda mengenal Linux?', ''),
 (206, 0, 416, 0, 'Anda mengenal Cortana dengan sangat baik?', ''),
 (207, 0, 416, 0, 'Anda selalu melihat ke dalam setiap inci wawasan terperinci di tiap kincir angin penglihatan yang telah berlalu?', ''),
-(208, 0, 416, 0, 'Kapan terakhir kali Anda melihat akhir cerita terlahir yang mapan dan berkelebat secepat kilat balapan?', '');
+(208, 0, 416, 0, 'Kapan terakhir kali Anda melihat akhir cerita terlahir yang mapan dan berkelebat secepat kilat balapan?', ''),
+(209, 0, 425, 0, 'Hello', ''),
+(210, 0, 425, 0, 'Hello', ''),
+(211, 0, 425, 0, 'Hello', ''),
+(212, 0, 425, 0, 'Hello', ''),
+(213, 0, 425, 0, 'Hello', ''),
+(214, 0, 425, 0, 'Hello', ''),
+(215, 0, 425, 0, 'Hello', ''),
+(216, 0, 425, 0, 'Tambah lagi', ''),
+(217, 0, 425, 0, 'Hello', ''),
+(218, 0, 450, 0, '', ''),
+(219, 0, 450, 0, 'Test lag', ''),
+(220, 0, 450, 0, 'Tesing lagi', ''),
+(221, 0, 451, 0, 'Pertanyaan pertama', ''),
+(222, 0, 451, 0, 'Pertanyaan kedua', ''),
+(223, 0, 451, 0, 'Pertanyaan ketiga', ''),
+(224, 0, 451, 0, 'Pertanyaan keempat', ''),
+(225, 0, 452, 0, 'Seberapa penting nama Anda terpampang dalam daftar orang - orang tertampan yang memiliki kepentingan cuma beberapa titik debu dalam khayalan?', ''),
+(226, 0, 452, 0, 'Seberapa baik Anda memahami hati suami/istri yang baik hati melebihi merpati?', ''),
+(227, 0, 453, 0, 'Akumulasi semangat Anda saat ini', ''),
+(228, 0, 453, 0, 'Jiwa sosial yang Anda miliki yang merupakan nilai hakiki', ''),
+(229, 0, 454, 0, 'Sangat keren..', ''),
+(230, 0, 454, 0, 'Lalu bertanya', ''),
+(231, 0, 455, 0, 'Keren sekali bukan', ''),
+(233, 0, 462, 0, 'Hleo', ''),
+(235, 0, 462, 0, 'Lalu lagi', ''),
+(236, 0, 477, 0, 'Soijoijiojio', ''),
+(237, 0, 477, 0, 'Soijoijiojio', ''),
+(238, 0, 477, 0, 'Soijoijiojio', ''),
+(239, 0, 477, 0, 'Soijoijiojio', ''),
+(240, 0, 477, 0, 'Soijoijiojio', ''),
+(241, 0, 477, 0, 'Soijoijiojio', ''),
+(242, 0, 477, 0, 'Soijoijiojio', ''),
+(243, 0, 477, 0, 'Soijoijiojio', ''),
+(244, 0, 478, 0, 'Pernyatanan', ''),
+(245, 0, 478, 0, 'Pernyatanan', ''),
+(246, 0, 479, 0, 'Pertanyaan 01', ''),
+(247, 0, 479, 0, 'Pertanyaan 01', ''),
+(248, 0, 480, 0, 'Test soal', ''),
+(249, 0, 481, 0, 'Ini yang ke 429', ''),
+(250, 0, 482, 0, 'Helooooooooooo', ''),
+(251, 0, 484, 0, 'Maris ay updast', ''),
+(252, 0, 485, 0, 'Hello', ''),
+(253, 0, 487, 0, 'Helloo', ''),
+(254, 0, 491, 0, 'Lalu', ''),
+(255, 0, 492, 0, 'Hello', ''),
+(256, 0, 493, 0, 'Halo, ', ''),
+(257, 0, 494, 0, 'Kehebatan data yang diberikan', ''),
+(258, 0, 495, 0, 'Pemahaman bahasa inggris Anda', ''),
+(259, 0, 496, 0, 'Helo', ''),
+(260, 0, 496, 0, 'mantap ', '');
 
 --
 -- Indexes for dumped tables
@@ -730,9 +1004,21 @@ ALTER TABLE `q_rating`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `q_rating_pilihan`
+--
+ALTER TABLE `q_rating_pilihan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `q_semantik`
 --
 ALTER TABLE `q_semantik`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `q_semantik_pilihan`
+--
+ALTER TABLE `q_semantik_pilihan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -766,12 +1052,12 @@ ALTER TABLE `data`
 -- AUTO_INCREMENT for table `form_isian`
 --
 ALTER TABLE `form_isian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 --
 -- AUTO_INCREMENT for table `kuesioner`
 --
 ALTER TABLE `kuesioner`
-  MODIFY `id_kuesioner` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=417;
+  MODIFY `id_kuesioner` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=498;
 --
 -- AUTO_INCREMENT for table `peneliti`
 --
@@ -801,27 +1087,37 @@ ALTER TABLE `q_gutman_pilihan_uf`
 -- AUTO_INCREMENT for table `q_liker`
 --
 ALTER TABLE `q_liker`
-  MODIFY `id_liker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=282;
+  MODIFY `id_liker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=283;
 --
 -- AUTO_INCREMENT for table `q_liker_pilihan_f`
 --
 ALTER TABLE `q_liker_pilihan_f`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=226;
 --
 -- AUTO_INCREMENT for table `q_liker_pilihan_uf`
 --
 ALTER TABLE `q_liker_pilihan_uf`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=226;
 --
 -- AUTO_INCREMENT for table `q_rating`
 --
 ALTER TABLE `q_rating`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+--
+-- AUTO_INCREMENT for table `q_rating_pilihan`
+--
+ALTER TABLE `q_rating_pilihan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `q_semantik`
 --
 ALTER TABLE `q_semantik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+--
+-- AUTO_INCREMENT for table `q_semantik_pilihan`
+--
+ALTER TABLE `q_semantik_pilihan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `responden`
 --
@@ -836,7 +1132,7 @@ ALTER TABLE `responden_info`
 -- AUTO_INCREMENT for table `soal`
 --
 ALTER TABLE `soal`
-  MODIFY `id_soal` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
+  MODIFY `id_soal` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=261;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
