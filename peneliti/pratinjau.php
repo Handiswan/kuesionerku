@@ -136,6 +136,25 @@ if ($s) {
         echo "<li>$d_jawaban_b[0]</li>";
         echo "</ul>";
       }
+    } else if ($r['jenis_skala'] == 'rating') {
+      // echo "ini skala ratin loh";
+      $s = $PDO->prepare("SELECT * FROM q_rating_pilihan WHERE kuesioner_id = ?");
+      if ($s) {
+        $s->bindParam(1, $r['id_kuesioner']);
+        if ($s->execute()) {
+          $rs = $s->fetch(PDO::FETCH_ASSOC);
+          // print_r($rs);
+          echo "<ul id='daftarJawaban' class='daftar-jawaban'>";
+          echo "<li style='overflow:auto'>";
+          echo "<div>";
+          echo "<span style='float:left'>" . $rs['nilai_min'] . "</span>";
+          echo "<input id='batasan' type='range' min='" . $rs['nilai_min'] . "' max='" . $rs['nilai_max'] . "'>";
+          echo "<span style='float:right'>" . $rs['nilai_max'] . "</span>";
+          echo "</div>";
+          echo "</li>";
+          echo "</ul>";
+        }
+      }
     }
     ?>
     <div onclick="pratinjau.berikutnya()" id="berikutnya" class="pratinjau-lainnya">Berikutnya</div>

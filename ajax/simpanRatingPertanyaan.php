@@ -15,30 +15,6 @@ if ($_POST['last_insert_id'] == 0) {
         ));
         echo $j;
     }
-    // simpan data baru juga untuk q_rating pilihan
-    $s = $PDO->prepare(
-      "INSERT INTO q_rating_pilihan (
-        kuesioner_id,
-        q_rating_id,
-        nilai_min,
-        nilai_max
-       )
-       VALUES(?, ?, ?, ?)"
-    );
-    if ($s) {
-      //echo "persiapan q_rating_pilihan berhasil";
-      $s->bindParam(1, $_POST['id_kuesioner']);
-      $s->bindParam(2, $id_terakhir);
-      $s->bindParam(3, $_POST['nilai_min']);
-      $s->bindParam(4, $_POST['nilai_max']);
-      if ($s->execute()) {
-        // ok aman, semestinnya keluaran dalam bentuk JSONnya dibawah
-      } else {
-        echo "eksekusi q_rating_pilihan GAGAL";
-      }
-    } else {
-      echo "persiapan proses penambahan data pada tabel q_gutman_pilihan gagal";
-    }
   }
 } else {
   // karena data POST last_insert_id != 0, maka update data tersebut.
@@ -49,24 +25,10 @@ if ($_POST['last_insert_id'] == 0) {
     if ($q->execute()) {
       $r = json_encode(array(
         'result' => 'ok',
-        'terupdate' => 'ok',
+        'terupdate' => 'pada tabel soal di basis data',
         'last_insert_id' => $_POST['last_insert_id']
       ));
       echo $r;
-    }
-    // perbaharui juga data baru untulk q_rating_pilihan
-    $s = $PDO->prepare(
-      "UPDATE q_rating_pilihan
-       SET nilai_min = ?,
-       nilai_max = ?,
-       WHERE q_rating_id = ?
-       "
-    );
-    if ($s) {
-      $s->bindParam(1, $_POST['nilai_min']);
-      $s->bindParam(2, $_POST['nilai_max']);
-      $s->bindParam(3, $_POST['last_insert_id']);
-      $s->execute();
     }
   }
 }
