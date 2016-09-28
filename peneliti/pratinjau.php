@@ -221,7 +221,7 @@ if ($s) {
           echo "<div id='jawaban_a' class='boks-semantic' style='border-color:#fff'>" . $d_jawaban_a[0] . "</div>";
           $i = 0;
           foreach ($interval[0] as $key => $value) {
-            echo "<div id='interval_" . $i . "' class='boks-semantic'>" . $value . "</div>";
+            echo "<div id='interval_" . $i . "' class='boks-semantic omob'>" . $value . "</div>";
             $i++;
           }
           echo "<div id='jawaban_b' class='boks-semantic' style='border-color:#fff'>" . $d_jawaban_b[0] . "</div>";

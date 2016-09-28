@@ -19,6 +19,12 @@
 .daftar-jawaban-semantic li {
   list-style-type: none;
 }
+
+.omob:hover {
+  background: black;
+  color: #fff;
+  cursor: pointer;
+}
 .boks-semantic {
   float: left;
   text-align: center;

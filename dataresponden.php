@@ -25,6 +25,7 @@ if($get_kuesioner) {
 // echo "Ini adalah halaman kuesioner untuk para responden dengan kode " . $_GET['q'];
 ?>
 <body>
+  <input type="hidden" id="id_kuesioner" value="<?php echo $row_get_kuesioner['id_kuesioner']; ?>">
   <div class="navbar navbar-default navbar-fixed-top">
     <a href="index.php"> <img src="lib/img/logo.png" style="padding: 10px; width:250px; margin-left:20px"> </a>
   </div>
