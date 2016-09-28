@@ -14,7 +14,7 @@
   Anda yakin ingin mengapus data tersebut?
 </div>
 <div id="dialogInfo" title="Info" style="display:none">Harap lengkapi data yang masih kosong</div>
-<div class="header" style="position:fixed;width:100%;height:100px">
+<div class="header" style="position:fixed;width:100%;height:60px;z-index:1">
   <a href="index.php"> <img src="../lib/img/logo.png" style="padding: 10px; width:250px; margin-left:20px"> </a>
   <?php
 include "../config.php";

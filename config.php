@@ -7,7 +7,7 @@ $database = "kuesioner";
 $homepage = "http://localhost/kuesioner";
 
 // !Pengaturan tampilan error dengan error_reporting
-ini_set('display_errors',1);
+ini_set('display_errors',0);
 
 // !Koneksi ke database pakai PDO
 try {

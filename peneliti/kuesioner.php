@@ -8,7 +8,7 @@ include "menu.php";
 	 </h4>
 </div>
 <div class="body2">
-  <h2 class="a">DAFTAR KUESIONER</h2>
+  <h2 class="a" style='text-shadow: 0 3px 3px #ddd'>DAFTAR KUESIONER</h2>
   <?php
   // print_r($_SESSION);
   $q_list = $PDO->prepare("SELECT * FROM kuesioner WHERE id_peneliti = ?");
@@ -17,7 +17,7 @@ include "menu.php";
       $q_list->execute();
       $q_list_count = $q_list->rowCount();
       if($q_list_count == 0) {
-	      echo "<p class='bg-warning' style='padding:10px'>Maaf belum ada data</p>";
+	      echo "<p class='bg-warning' style='padding:10px;box-shadow:0 3px 3px #f1e8bd;border: solid 1px #f1e9c2;'>Maaf belum ada data</p>";
       } else {
 	  echo "<table class='table table-striped'>";
 	  echo "<thead style='font-weight:bold'><tr><td>#</td><td>Judul</td><td>Skala</td><td>Link</td><td>Pilihan</td><td>Dibuat</td></tr></thead>";

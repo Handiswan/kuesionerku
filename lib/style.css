@@ -18,6 +18,11 @@
     border-radius: 3px;
     padding: 10px;
     margin-right: 10px;
+    box-shadow: 0 3px 5px #99c799;
+}
+
+.form-control {
+    box-shadow: 0 3px 3px #ddd;
 }
 
 a.menu {
