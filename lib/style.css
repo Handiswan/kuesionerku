@@ -12,6 +12,21 @@
     margin: 0;
     padding: 0;
 }
+.daftar-jawaban-semantic {
+  margin: 0 auto;
+  width: 900px;
+}
+.daftar-jawaban-semantic li {
+  list-style-type: none;
+}
+.boks-semantic {
+  float: left;
+  text-align: center;
+  width: 100px;
+  border: solid 2px #000;
+  margin: 10px;
+  padding: 10px;
+}
 .angka {
     background: green;
     color: #fff;

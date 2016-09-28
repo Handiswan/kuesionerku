@@ -143,14 +143,17 @@ if ($s) {
         $s->bindParam(1, $r['id_kuesioner']);
         if ($s->execute()) {
           $rs = $s->fetch(PDO::FETCH_ASSOC);
+          $interval = floor(($rs['nilai_max'] - $rs['nilai_min']) / 4);
+          $nilai_a = $rs['nilai_min'];
+          $nilai_b = $nilai_a + $interval;
+          $nilai_c = $nilai_a + ($interval * 2);
+          $nilai_d = $rs['nilai_max'];
           // print_r($rs);
           echo "<ul id='daftarJawaban' class='daftar-jawaban'>";
-          echo "<li style='overflow:auto'>";
-          echo "<div>";
-          echo "<span style='float:left'>" . $rs['nilai_min'] . "</span>";
-          echo "<input id='batasan' type='range' min='" . $rs['nilai_min'] . "' max='" . $rs['nilai_max'] . "'>";
-          echo "<span style='float:right'>" . $rs['nilai_max'] . "</span>";
-          echo "</div>";
+          echo "<li>" . $nilai_a . "</li>";
+          echo "<li>" . $nilai_b . "</li>";
+          echo "<li>" . $nilai_c . "</li>";
+          echo "<li>" . $nilai_d . "</li>";
           echo "</li>";
           echo "</ul>";
         }
@@ -164,21 +167,38 @@ if ($s) {
           $d_jawaban_b = [];
           $d_nilai_a = [];
           $d_nilai_b = [];
+          $interval = [];
           while($daftar = $q->fetch(PDO::FETCH_ASSOC)) {
+            $dalam_interval = [];
+            for ($i = 0; $i < 5; $i++) {
+              $selisih = floor(($daftar['nilai_max'] - $daftar['nilai_min']) / 5);
+              if ($i == 0) {
+                $dalam_interval[] = $daftar['nilai_min'];
+              } else if ($i == 4) {
+                $dalam_interval[] = $daftar['nilai_max'];
+              } else {
+                $dalam_interval[] = $daftar['nilai_min'] + ($selisih * $i);
+              }
+            }
             $d_jawaban_a[] = $daftar['label_min'];
             $d_jawaban_b[] = $daftar['label_max'];
             $d_nilai_a[] = $daftar['nilai_min'];
             $d_nilai_b[] = $daftar['nilai_max'];
+            $interval[] = $dalam_interval;
           }
+          //echo "<pre>";
           //print_r($d_jawaban_a);
           //print_r($d_jawaban_b);
           //print_r($d_nilai_a);
           //print_r($d_nilai_b);
+          // print_r($interval);
+          //echo "</pre>";
           echo "<script type='text/javascript' language='javascript'>";
           echo "var jawaban_a = new Array();";
           echo "var jawaban_b = new Array();";
           echo "var nilai_a = new Array();";
           echo "var nilai_b = new Array();";
+          echo "var interval = new Array();";
           foreach($d_jawaban_a as $key => $value) {
             echo "jawaban_a.push('$value');";
           }
@@ -191,13 +211,25 @@ if ($s) {
           foreach($d_nilai_b as $key => $value) {
             echo "nilai_b.push('$value');";
           }
+          foreach($interval as $key => $value) {
+            echo "interval.push(" . json_encode($value) . ");";
+          }
           echo "</script>";
           // tampilkan html nya
-          echo "<ul id='daftarJawaban' class='daftar-jawaban'>";
+          echo "<ul id='daftarJawaban' class='daftar-jawaban-semantic'>";
           echo "<li style='overflow:auto'>";
+          echo "<div id='jawaban_a' class='boks-semantic' style='border-color:#fff'>" . $d_jawaban_a[0] . "</div>";
+          $i = 0;
+          foreach ($interval[0] as $key => $value) {
+            echo "<div id='interval_" . $i . "' class='boks-semantic'>" . $value . "</div>";
+            $i++;
+          }
+          echo "<div id='jawaban_b' class='boks-semantic' style='border-color:#fff'>" . $d_jawaban_b[0] . "</div>";
+          /*
           echo "<span style='float:left'>" . $d_jawaban_a[0] . " (" . $d_nilai_a[0] . ")</span>";
           echo "<input type='range' id='batasan' min='" . $d_nilai_a[0] . "' max='" . $d_nilai_b[0] . "'>";
           echo "<span style='float:right'>" . $d_jawaban_b[0] . " (" . $d_nilai_b[0] . ")</span>";
+          */
           echo "</li>";
           echo "</ul>";
         }
