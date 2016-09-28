@@ -12,6 +12,13 @@
     margin: 0;
     padding: 0;
 }
+.angka {
+    background: green;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    margin-right: 10px;
+}
 
 a.menu {
     height: 60px;
@@ -159,6 +166,7 @@ footer {
 #listPertanyaan li {
     margin: 5px;
     list-style-type: none;
+    margin-bottom: 50px;
 }
 
 #listPertanyaan li input[type=text] {
